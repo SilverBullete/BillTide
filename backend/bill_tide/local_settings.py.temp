@@ -1,0 +1,16 @@
+LOCAL_APP_CODE = ""
+LOCAL_SECRET_KEY = ''
+LOCAL_DATABASE = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': LOCAL_APP_CODE,
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'post': 3306,
+    },
+}
+
+# 配置收件邮箱
+EMAIL = ''
+PASSWORD = ''

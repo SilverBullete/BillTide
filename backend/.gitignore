@@ -1,0 +1,32 @@
+__pycache__
+Pipfile
+# 忽略数据库文件
+*.sqlite3
+
+# 忽略IDE或编辑器的配置文件和目录
+.vscode/
+.idea/
+*.pyc
+
+# 忽略静态文件和媒体文件
+/static/
+/media/
+
+# 忽略本地配置文件
+local_settings.py
+
+# 忽略日志文件
+/log/
+
+# 忽略部署相关的文件
+/.env
+/.vs/
+/deploy/
+
+# 忽略备份文件
+*.bak
+*.backup
+*.swp
+
+# 忽略所有的 migrations 目录
+**/migrations/
