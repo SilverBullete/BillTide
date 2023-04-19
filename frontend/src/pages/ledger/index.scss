@@ -1,0 +1,81 @@
+.ledger {
+  header.header {
+    padding: 26px 14px 16px;
+    background: $success;
+    color: $white;
+    .title {
+      font-size: $large-text-size;
+      text-align: center;
+    }
+  }
+
+  div.book-list {
+    flex-grow: 1;
+    overflow: auto;
+    .book-info {
+      color: $normal-text;
+      text-decoration: none;
+      display: flex;
+      height: 150px;
+      padding: 10px;
+      background-color: white;
+      border-radius: 10px;
+      margin: 15px;
+      .book-info-left {
+        margin-top: -3px;
+        img {
+          width: 116.8px;
+          height: 142.4px;
+        }
+      }
+      .book-info-right {
+        margin-left: 10px;
+        width: 100%;
+        margin-top: 5px;
+        p {
+          font-size: $large-text-size;
+        }
+        .book-info-summary {
+          display: grid;
+          grid-template-columns: 40% 20% 40%;
+          margin-top: 20px;
+          div {
+            display: flex;
+            flex-direction: column;
+            span {
+              padding: 2px 0;
+              font-size: 1.1rem;
+            }
+            span:nth-child(2n + 1) {
+              color: $sub-text;
+              font-size: 1.2rem;
+            }
+          }
+        }
+        .book-info-foot {
+          margin-right: 10px;
+          text-align: right;
+        }
+      }
+    }
+  }
+  p.book-list-foot {
+    text-align: center;
+    color: $placeholder;
+    font-size: $small-text-size;
+  }
+  button.add-book-button {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    height: 45px;
+    line-height: 45px;
+    background-color: $success;
+    width: 150px;
+    color: white;
+    border-radius: 45px;
+    font-size: 18px;
+    user-select: none;
+  }
+}

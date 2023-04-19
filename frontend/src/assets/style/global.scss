@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: $normal-text-size;
+  font-family: "SimHei", "Helvetica Neue", Helvetica, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  user-select: none;
+}
+
+body {
+  background: #323232;
+}
+
+a {
+  color: $link-text;
+}
+
+a,
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  vertical-align: -0.15em;
+  fill: currentColor;
+}
+
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.tooltip {
+  display: none;
+}
+
+.tooltip::before {
+  //这里就是小三角了
+  position: absolute;
+  top: 100%; //给小三角定位，更具实际需求调整
+  left: 50%; //给小三角定位，更具实际需求调整
+  display: block;
+  border-color: #000000c0 transparent transparent transparent;
+  border-style: dashed solid dashed dashed;
+  border-width: 10px;
+  transform: translate(-10px, 1px);
+  content: ""; //四个参数分别代表向下，左，上右的小三角(对应方向的小三角设置为solid，其他的为dashed。我这里演示向左的小三角，所以设置第二个）//四个参数分别代表向下，左，上右的小三角。对应方向的小三角设置你想要的颜色（为了直观我这里设置黑色），其他的为transparent。我这里演示向左的小三角，所以设置第二个。
+}

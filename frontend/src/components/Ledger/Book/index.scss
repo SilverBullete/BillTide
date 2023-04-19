@@ -1,0 +1,169 @@
+.book {
+  p.title {
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: $main-text-size;
+  }
+  div.module {
+    position: relative;
+    height: 160px;
+    width: 100%;
+    overflow: hidden;
+    div.item {
+      position: absolute;
+      height: 142.4px;
+      width: 116.8px;
+      transform: translate(-50%, 0);
+      img {
+        // height: 89px;
+        // width: 73px;
+        height: 142.4px;
+        width: 116.8px;
+        transform: scale(0.7);
+      }
+      top: 20px;
+      div.checked {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: $success;
+        border-radius: 20px;
+        text-align: center;
+        line-height: 20px;
+        bottom: 0px;
+        right: 0px;
+        animation: showCheck 0.25s ease-in;
+      }
+    }
+    div.item.selected {
+      img {
+        // height: 142.4px;
+        // width: 116.8px;
+        transform: scale(1);
+      }
+      // top: 0px;
+    }
+  }
+  div.form-input {
+    border-bottom: 1px solid #eee;
+    margin: 20px;
+    padding-bottom: 10px;
+    font-size: $main-text-size;
+    label {
+      font-weight: 700;
+      margin-right: 20px;
+    }
+    input {
+      border: none;
+      width: 16rem;
+    }
+    input:focus {
+      outline: none;
+    }
+  }
+  button.add-book-button {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    height: 45px;
+    line-height: 45px;
+    background-color: $success;
+    width: 180px;
+    color: white;
+    border-radius: 45px;
+    font-size: 18px;
+    user-select: none;
+  }
+}
+
+// 从右侧不可见到右侧可见
+@keyframes enterFromInvisibleToRight {
+  0% {
+    transform: scale(0.4) translate(50vw, 0);
+  }
+  100% {
+    transform: scale(0.7) translate(0, 0);
+  }
+}
+
+// 从右侧进入变为选中
+@keyframes enterFromRightToCenter {
+  0% {
+    transform: scale(0.7) translate(50vw, 0);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+// 从选中到从左侧离开
+@keyframes quitFromCenterToLeft {
+  0% {
+    transform: scale(1) translate(50vw, 0);
+  }
+  100% {
+    transform: scale(0.7) translate(0, 0);
+  }
+}
+
+// 从左侧到左侧不可见
+@keyframes quitFromLeftToInvisible {
+  0% {
+    transform: scale(0.7) translate(50vw, 0);
+  }
+  100% {
+    transform: scale(0.4) translate(0, 0);
+  }
+}
+
+// 从左侧不可见到左侧可见
+@keyframes enterFromInvisibleToLeft {
+  0% {
+    transform: scale(0.4) translate(-50vw, 0);
+  }
+  100% {
+    transform: scale(0.7) translate(0, 0);
+  }
+}
+
+// 从左侧进入变为选中
+@keyframes enterFromLeftToCenter {
+  0% {
+    transform: scale(0.7) translate(-50vw, 0);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+// 从选中到从右侧离开
+@keyframes quitFromCenterToRight {
+  0% {
+    transform: scale(1) translate(-50vw, 0);
+  }
+  100% {
+    transform: scale(0.7) translate(0, 0);
+  }
+}
+
+// 从右侧到右侧不可见
+@keyframes quitFromRightToInvisible {
+  0% {
+    transform: scale(0.7) translate(-50vw, 0);
+  }
+  100% {
+    transform: scale(0.4) translate(0, 0);
+  }
+}
+
+@keyframes showCheck {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}

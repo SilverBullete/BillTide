@@ -1,0 +1,30 @@
+.menu {
+  padding: 12px 0;
+  background: white;
+  box-shadow: 0px -2px 12px 0px rgba(192, 196, 204, 0.4);
+  z-index: 2;
+  a {
+    text-decoration: none;
+  }
+  .selected {
+    color: $success;
+  }
+  .menu-item {
+    flex-grow: 1;
+    width: 25%;
+    float: left;
+    color: $normal-text;
+    font-size: $normal-text-size;
+    text-align: center;
+    > div {
+      margin-top: 4px;
+      color: $normal-text;
+      text-align: center;
+    }
+  }
+  .menu-item .selected {
+    > div {
+      color: $success;
+    }
+  }
+}
