@@ -1,0 +1,40 @@
+.settings {
+  .main {
+    flex-grow: 1;
+    overflow: auto;
+    .item {
+      padding-left: 16px;
+      display: flex;
+      align-items: center;
+      background: white;
+      > span {
+        padding: 16px 0;
+        margin-left: 16px;
+        font-size: 1.2em;
+        flex-grow: 1;
+      }
+      :active {
+        background: #d6d6d6;
+      }
+    }
+  }
+  .qr-code {
+    padding: 32px;
+    text-align: center;
+    > p {
+      font-size: $large-text-size;
+    }
+    > img {
+      margin-top: 24px;
+      width: 200px;
+    }
+  }
+  .contact {
+    padding: 24px;
+    text-align: center;
+    span,
+    a {
+      font-size: $large-text-size;
+    }
+  }
+}
