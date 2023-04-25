@@ -1,0 +1,15 @@
+.progress-bar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  .bar {
+    position: relative;
+    border-radius: 16px;
+    .progress {
+      position: absolute;
+      left: 0;
+      height: 100%;
+      border-radius: 16px;
+    }
+  }
+}

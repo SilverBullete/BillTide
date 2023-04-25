@@ -4,6 +4,7 @@ import "./App.scss";
 import Ledger from "./pages/Ledger";
 import Settings from "./pages/Settings";
 import Summary from "./pages/Summary";
+import Analysis from "./pages/Analysis";
 
 function App() {
   const [height, setHeight] = useState(window.innerHeight);
@@ -23,10 +24,12 @@ function App() {
         <Routes>
           {/* 账本界面 */}
           <Route path="/ledger" element={<Ledger />}></Route>
-          {/* 设置界面 */}
-          <Route path="/settings" element={<Settings />}></Route>
           {/* 明细界面 */}
           <Route path="/book/:id" element={<Summary />}></Route>
+          {/* 统计界面 */}
+          <Route path="/analysis" element={<Analysis />}></Route>
+          {/* 设置界面 */}
+          <Route path="/settings" element={<Settings />}></Route>
         </Routes>
       </div>
     </Router>

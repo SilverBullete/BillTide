@@ -1,0 +1,51 @@
+.analysis {
+  .analysis-content {
+    overflow: auto;
+    > .header {
+      color: white;
+      padding: 20px;
+      .header-buttons {
+        height: 60px;
+        display: grid;
+        grid-template-columns: 70% 15% 15%;
+        .month-selecter {
+          font-size: 16px;
+        }
+        .type-button {
+          text-align: center;
+          font-size: 16px;
+          height: 30px;
+          line-height: 30px;
+          border-radius: 5px;
+        }
+        .type-button.select {
+          background-color: rgba(255, 255, 255, 0.1);
+        }
+      }
+      .header-info {
+        span {
+          color: rgba(255, 255, 255, 0.4);
+          font-weight: 400;
+        }
+        .symbol {
+          color: #fff;
+          font-weight: 600;
+          font-size: 21px;
+          vertical-align: text-top;
+        }
+        font-size: 26px;
+        font-weight: 500;
+      }
+    }
+    > .header.expense {
+      background: $success;
+    }
+    > .header.income {
+      background: $warning;
+    }
+    > .main {
+      background: white;
+      padding: 24px;
+    }
+  }
+}

@@ -24,3 +24,11 @@ export type TMonthRecord = TRecord & {
   month: string;
   recordList: TDayRecord[];
 };
+
+export const parseMonthRecord = (monthRecord: TMonthRecord) => {
+  let rawRecordList: TRawRecord[] = [];
+  monthRecord.recordList.forEach((m) =>
+    m.recordList.forEach((d) => rawRecordList.push(d))
+  );
+  return rawRecordList;
+};

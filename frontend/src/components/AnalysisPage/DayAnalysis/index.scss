@@ -1,0 +1,13 @@
+.day-analysis {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    > span {
+      font-size: $main-text-size;
+    }
+  }
+  .main {
+    margin: 0 -24px;
+  }
+}
