@@ -12,13 +12,15 @@ const Icon = (props: TProps) => {
 
   return (
     <svg
-      height={size}
-      width={size}
       fill={color}
       color={color}
       className="icon"
       aria-hidden="true"
       {...attributes}
+      style={{
+        height: size,
+        width: size,
+      }}
     >
       <use xlinkHref={`#${name}`} />
     </svg>

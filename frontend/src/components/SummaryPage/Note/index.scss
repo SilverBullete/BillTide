@@ -1,0 +1,41 @@
+.note-pannel {
+  padding: 20px;
+  .note-input {
+    padding: 0 0 20px 0;
+    input {
+      background-color: #f7f7f7;
+      padding: 20px;
+      border-radius: 5px;
+    }
+  }
+  .word-count {
+    color: #b2b2b2;
+    font-size: 1.2rem;
+  }
+  .tags {
+    padding: 20px 0 0 0;
+    display: flex;
+    font-size: 1.2rem;
+    flex-wrap: wrap;
+    span {
+      margin-right: 10px;
+      padding: 10px;
+      color: #b2b2b2;
+    }
+  }
+  .submit-button {
+    display: flex;
+    padding: 30px 0;
+    button {
+      margin: auto;
+      width: 50vw;
+      border-width: 0;
+      display: flex;
+      --background-color: $success !important;
+      span {
+        margin: auto;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

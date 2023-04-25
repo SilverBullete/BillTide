@@ -2,7 +2,7 @@ import Menu from "../Menu";
 import "./index.scss";
 
 interface LayoutProps {
-  children: string | JSX.Element | JSX.Element[];
+  children: React.ReactNode;
   className?: string;
 }
 

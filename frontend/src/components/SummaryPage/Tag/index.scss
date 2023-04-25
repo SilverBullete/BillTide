@@ -1,0 +1,12 @@
+.tag {
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4px;
+  background: #f4f4f4;
+  color: $sub-text;
+  font-size: $small-text-size !important;
+  border-radius: 4px;
+}

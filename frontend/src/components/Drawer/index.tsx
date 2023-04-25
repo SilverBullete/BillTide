@@ -3,7 +3,7 @@ import "./index.scss";
 
 interface DrawerProps {
   closeDrawer: () => void;
-  children: string | JSX.Element | JSX.Element[];
+  children: React.ReactNode;
   title?: string;
   iconName?: string;
 }

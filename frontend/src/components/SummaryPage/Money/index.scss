@@ -1,0 +1,66 @@
+.money-pannel {
+  .type-section {
+    padding: 16px;
+    align-items: center;
+  }
+  .amount-section {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid #eee;
+    line-height: 3.5em;
+    > span {
+      font-size: 2.5em;
+    }
+    > div {
+      padding-left: 8px;
+      flex-grow: 1;
+      border: none;
+      outline: none;
+      height: 3.5rem;
+      font-size: 2em;
+      text-align: left;
+    }
+  }
+  .category-list {
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
+    align-items: center;
+    width: 100vw;
+    height: 140px;
+    overflow-y: auto;
+    list-style: none;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+    .category-item {
+      height: 70px;
+      padding: 5px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 8px;
+      .category-text {
+        font-size: 0.8em;
+        margin-top: 8px;
+        color: $sub-text;
+        word-break: keep-all;
+      }
+    }
+  }
+  .note-section {
+    display: flex;
+    align-items: center;
+    padding: 0 24px 24px;
+    > span {
+      margin-right: 8px;
+      color: $link-text;
+      cursor: pointer;
+    }
+  }
+  .number-pad-section {
+    padding: 4px;
+    background: #fafafa;
+  }
+}

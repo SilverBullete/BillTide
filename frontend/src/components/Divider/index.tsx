@@ -18,6 +18,7 @@ const Divider = (props: DividerProps) => {
     ></div>
   ) : (
     <span
+      className="divider"
       style={{ margin: `0 ${props.gap}px`, borderColor: props.color }}
     ></span>
   );

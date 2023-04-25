@@ -1,0 +1,60 @@
+.summary {
+  .header {
+    padding: 26px 14px 16px;
+    background: $success;
+    color: $white;
+    position: relative;
+    .title {
+      font-size: $large-text-size;
+      text-align: center;
+    }
+    .more {
+      position: absolute;
+      top: 22.5px;
+      right: 14px;
+      font-size: 2rem;
+      svg {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+  .filter-wrapper {
+    padding: 0 12px;
+    background: $success;
+    color: $white;
+    .type-button {
+      margin-top: 26px;
+      padding: 8px 16px;
+      color: $white;
+      background: #53bc82;
+      border: none;
+      outline: none;
+      border-radius: 4px;
+    }
+    .month-filter-section {
+      padding-top: 8px;
+      font-weight: 300;
+      .month-button {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 16px;
+        color: $white;
+        border: none;
+        outline: none;
+        background: none;
+      }
+    }
+  }
+  .empty {
+    padding-top: 24px;
+    height: 100%;
+    text-align: center;
+    color: $sub-text;
+  }
+  .record-list {
+    padding: 8px;
+    flex-grow: 1;
+    overflow: auto;
+  }
+}
