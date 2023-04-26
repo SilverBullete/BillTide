@@ -3,7 +3,7 @@ import Layout from "../../components/Layout";
 import Icon from "../../components/Icon";
 import Divider from "../../components/Divider";
 import Drawer from "../../components/Drawer";
-import Book from "../../components/Ledger/Book";
+import Book from "../../components/LedgerPage/Book";
 import useAxios from "../../hooks/useAxios";
 import { Link } from "react-router-dom";
 import "./index.scss";
@@ -23,10 +23,10 @@ const Ledger = () => {
   const [books, setBooks] = useState<BookProps[]>([]);
   const { data, error, loading, refetch } = useAxios(
     {
-      url: "/get_books",
+      url: "/api/get_books",
       method: "POST",
       data: {
-        user_id: "",
+        user_id: "123456789",
       },
     },
     { trigger: false }
@@ -38,8 +38,8 @@ const Ledger = () => {
 
   useEffect(() => {
     if (!data) return;
-    if (data.code === 200) {
-      setBooks(data.data);
+    if (data.data.code === 200) {
+      setBooks(data.data.data);
     }
   }, [data]);
 

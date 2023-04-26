@@ -86,7 +86,7 @@ const MonthAnalysis = (props: MonthAnalysisProps) => {
 
   const { data, error, loading, refetch } = useAxios(
     {
-      url: "/get_recent_records_count",
+      url: "/api/get_recent_records_count",
       method: "POST",
       data: {
         book_id: 1,

@@ -37,7 +37,7 @@ const CategoryFilter = (props: CategoryFilterProps) => {
         全部类型
       </div>
 
-      <p className="tag">支出</p>
+      <p className="category-tag">支出</p>
       <section className="filter-section">
         {categories
           .filter((value) => {
@@ -64,7 +64,7 @@ const CategoryFilter = (props: CategoryFilterProps) => {
           ))}
       </section>
 
-      <p className="tag">收入</p>
+      <p className="category-tag">收入</p>
       <section className="filter-section">
         {categories
           .filter((value) => {
@@ -90,7 +90,7 @@ const CategoryFilter = (props: CategoryFilterProps) => {
             </div>
           ))}
       </section>
-      <p className="tag">不计入收支</p>
+      <p className="category-tag">不计入收支</p>
       <section className="filter-section">
         {categories
           .filter((value) => {

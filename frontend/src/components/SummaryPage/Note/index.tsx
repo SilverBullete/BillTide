@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import useAxios from "../../../hooks/useAxios";
 import { Input, Tag, Button } from "antd-mobile";
+import "./index.scss";
 
 interface NoteProps {
   closeDrawer: () => void;
@@ -14,10 +15,10 @@ const Note = (props: NoteProps) => {
   const maxWords = 30;
   const { data, refetch, error, loading } = useAxios(
     {
-      url: "/get_notes",
+      url: "/api/get_notes",
       method: "POST",
       data: {
-        user_id: "",
+        user_id: "123456789",
       },
     },
     { trigger: false }
@@ -34,9 +35,9 @@ const Note = (props: NoteProps) => {
 
   const submit = () => {
     refetch({
-      url: "add_note",
+      url: "/api/add_note",
       data: {
-        user_id: "",
+        user_id: "123456789",
         content: value,
       },
     });

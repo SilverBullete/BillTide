@@ -53,10 +53,10 @@ const Money = (props: MoneyProps) => {
     refetch: getCategoriesRefetch,
   } = useAxios(
     {
-      url: "/get_categories",
+      url: "/api/get_categories",
       method: "POST",
       data: {
-        user_id: "",
+        user_id: "123456789",
         category_type: type,
       },
     },
@@ -70,10 +70,10 @@ const Money = (props: MoneyProps) => {
     refetch: editRecordsRefetch,
   } = useAxios(
     {
-      url: "/edit_record",
+      url: "/api/edit_record",
       data: {
         id: 0,
-        user_id: "",
+        user_id: "123456789",
         date: "",
         category_id: 0,
         amount: 0,
@@ -92,10 +92,10 @@ const Money = (props: MoneyProps) => {
     refetch: addRecordRefetch,
   } = useAxios(
     {
-      url: "/add_record",
+      url: "/api/add_record",
       method: "POST",
       data: {
-        user_id: "",
+        user_id: "123456789",
         category_type: type,
       },
     },
@@ -166,13 +166,13 @@ const Money = (props: MoneyProps) => {
 
   useEffect(() => {
     getCategoriesRefetch({
-      url: "/get_categories",
+      url: "/api/get_categories",
       data: {
-        user_id: "",
+        user_id: "123456789",
         category_type: type,
       },
     });
-  }, [type, getCategoriesRefetch]);
+  }, [type]);
 
   const onChangeAmount = (newValue: string) => {
     setAmountString(newValue);
@@ -193,10 +193,10 @@ const Money = (props: MoneyProps) => {
     }
     if (value) {
       editRecordsRefetch({
-        url: "/edit_record",
+        url: "/api/edit_record",
         data: {
           id: value.id,
-          user_id: "",
+          user_id: "123456789",
           date: date,
           category_id: categoryId,
           amount: amount,
@@ -206,9 +206,9 @@ const Money = (props: MoneyProps) => {
       });
     } else {
       addRecordRefetch({
-        url: "/add_record",
+        url: "/api/add_record",
         data: {
-          user_id: "",
+          user_id: "123456789",
           date: date,
           category_id: categoryId,
           amount: amount,

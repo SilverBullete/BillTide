@@ -19,7 +19,7 @@ const Analysis: React.FC = () => {
   const [type, setType] = useState<TRecordType>("expense");
   const { data, loading, error, refetch } = useAxios(
     {
-      url: "/get_records_by_month",
+      url: "/api/get_records_by_month",
       method: "POST",
       data: {
         book_id: 1,
@@ -38,7 +38,7 @@ const Analysis: React.FC = () => {
   useEffect(() => {
     if (data) {
       if (data.data.result) {
-        let idx = 1;
+        let idx = 0;
         let months = [dayjs().format("YYYY-MM")];
         while (true) {
           let day = dayjs().subtract(idx, "month");
@@ -106,7 +106,7 @@ const Analysis: React.FC = () => {
             </div>
           </div>
           <div className="header-info">
-            <span>共支出</span>
+            <span>{type === "expense" ? "共支出" : "共收入"}</span>
             <br />
             <span className="symbol">￥</span>
             {selectedRecordList.expenseTotal.toFixed(2)}

@@ -1,14 +1,14 @@
 .summary {
-  .header {
+  > .header {
     padding: 26px 14px 16px;
     background: $success;
     color: $white;
     position: relative;
-    .title {
+    > .title {
       font-size: $large-text-size;
       text-align: center;
     }
-    .more {
+    > .more {
       position: absolute;
       top: 22.5px;
       right: 14px;
@@ -46,13 +46,13 @@
       }
     }
   }
-  .empty {
+  > .empty {
     padding-top: 24px;
     height: 100%;
     text-align: center;
     color: $sub-text;
   }
-  .record-list {
+  > .record-list {
     padding: 8px;
     flex-grow: 1;
     overflow: auto;

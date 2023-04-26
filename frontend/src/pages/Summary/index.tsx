@@ -28,12 +28,12 @@ const BookField = () => {
   const [title, setTitle] = useState("");
   const [books, setBooks] = useState<string[][]>([[]]);
   const [dic, setDic] = useState<{ [key: string]: number }>({});
-  const { data, loading } = useAxios(
+  const { data, refetch } = useAxios(
     {
-      url: "/get_books",
+      url: "/api/get_books",
       method: "POST",
       data: {
-        user_id: "",
+        user_id: "123456789",
       },
     },
     { trigger: false }
@@ -50,6 +50,10 @@ const BookField = () => {
     { text: "从微信账单导入", key: "importFromWechat" },
     { text: "从支付宝账单导入", key: "importFromAlipay" },
   ];
+
+  useEffect(() => {
+    refetch();
+  }, []);
 
   useEffect(() => {
     if (data) {
@@ -135,7 +139,7 @@ const Summary = () => {
     refetch: getRecordRefetch,
   } = useAxios(
     {
-      url: "/get_records_by_book",
+      url: "/api/get_records_by_book",
       method: "POST",
       data: {
         book_id: 0,
@@ -150,10 +154,10 @@ const Summary = () => {
     refetch: getCategoriesRefetch,
   } = useAxios(
     {
-      url: "/get_all_categories",
+      url: "/api/get_all_categories",
       method: "POST",
       data: {
-        user_id: "",
+        user_id: "123456789",
       },
     },
     {
@@ -172,7 +176,7 @@ const Summary = () => {
     });
     getCategoriesRefetch({
       data: {
-        user_id: "",
+        user_id: "123456789",
       },
     });
   }, []);
@@ -238,7 +242,7 @@ const Summary = () => {
 
   useEffect(() => {
     getRecordRefetch({
-      url: "/get_records_by_book",
+      url: "/api/get_records_by_book",
       data: {
         book_id: id,
         filter_id: filterId,
@@ -248,7 +252,7 @@ const Summary = () => {
 
   const closeMoney = () => {
     getRecordRefetch({
-      url: "/get_records_by_book",
+      url: "/api/get_records_by_book",
       data: {
         book_id: id,
         filter_id: filterId,

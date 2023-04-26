@@ -21,9 +21,9 @@ const Book = (props: BookProps) => {
   } = useAxios(
     {
       method: "POST",
-      url: "/check_user_exist",
+      url: "/api/check_user_exist",
       data: {
-        user_id: "",
+        user_id: "123456789",
       },
     },
     { trigger: false }
@@ -35,9 +35,9 @@ const Book = (props: BookProps) => {
   } = useAxios(
     {
       method: "POST",
-      url: "/add_book",
+      url: "/api/add_book",
       data: {
-        user_id: "",
+        user_id: "123456789",
         cover: select,
         name: "",
         partner: "",
@@ -48,17 +48,17 @@ const Book = (props: BookProps) => {
 
   useEffect(() => {
     if (!checkUserExistData) return;
-    if (checkUserExistData.code === 200) {
-      if (checkUserExistData.data) {
+    if (checkUserExistData.data.code === 200) {
+      if (checkUserExistData.data.data) {
         let name = (document.getElementById("input-name") as HTMLInputElement)
           .value;
         let partner = (
           document.getElementById("input-partner") as HTMLInputElement
         ).value;
         addBookRefetch({
-          url: "/add_book",
+          url: "/api/add_book",
           data: {
-            user_id: "",
+            user_id: "123456789",
             cover: select,
             name: name,
             partner: partner,
@@ -89,7 +89,7 @@ const Book = (props: BookProps) => {
 
   useEffect(() => {
     if (!addBookData) return;
-    if (addBookData.code === 200) {
+    if (addBookData.data.code === 200) {
       Toast.show({
         icon: "success",
         content: "添加成功",
@@ -178,16 +178,16 @@ const Book = (props: BookProps) => {
       .value;
     if (partner !== "") {
       checkUserExistRefetch({
-        url: "/check_user_exist",
+        url: "/api/check_user_exist",
         data: {
           user_id: partner,
         },
       });
     } else {
       addBookRefetch({
-        url: "/add_book",
+        url: "/api/add_book",
         data: {
-          user_id: "",
+          user_id: "123456789",
           cover: select,
           name: name,
           partner: partner,
