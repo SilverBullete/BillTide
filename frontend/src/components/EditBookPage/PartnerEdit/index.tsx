@@ -25,7 +25,7 @@ const PartnerEdit = (props: PartnerEditProps) => {
 
   const submit = () => {
     checkUserExistRefetch({
-      url: "/check_user_exist",
+      url: "/api/check_user_exist",
       data: {
         user_id: value,
       },
@@ -39,7 +39,7 @@ const PartnerEdit = (props: PartnerEditProps) => {
         checkUserExistData.data.data
       ) {
         updateRefetch({
-          url: "/update_book_partner",
+          url: "/api/update_book_partner",
           data: {
             user_id: "123456789",
             book_id: id,

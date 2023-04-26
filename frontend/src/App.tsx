@@ -6,6 +6,7 @@ import Settings from "./pages/Settings";
 import Summary from "./pages/Summary";
 import Analysis from "./pages/Analysis";
 import EditBook from "./pages/EditBook";
+import Details from "./pages/RecordDetail";
 
 function App() {
   const [height, setHeight] = useState(window.innerHeight);
@@ -31,6 +32,8 @@ function App() {
           <Route path="/analysis" element={<Analysis />}></Route>
           {/* 设置界面 */}
           <Route path="/settings" element={<Settings />}></Route>
+          {/* 记录详情界面 */}
+          <Route path="/record/:id" element={<Details />}></Route>
           {/* 编辑账本界面 */}
           <Route path="/book_edit/:id" element={<EditBook />}></Route>
         </Routes>
