@@ -1,0 +1,30 @@
+.title-pannel {
+  padding: 20px;
+  > .title-input {
+    padding: 0 0 20px 0;
+    input {
+      padding: 20px;
+      background-color: #f7f7f7;
+      border-radius: 5px;
+    }
+  }
+  > .word-count {
+    color: #b2b2b2;
+    font-size: 1.2rem;
+  }
+  > .submit-button {
+    display: flex;
+    padding: 30px 0;
+    button {
+      display: flex;
+      width: 50vw;
+      margin: auto;
+      border-width: 0;
+      background-color: $success !important;
+      span {
+        margin: auto;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
